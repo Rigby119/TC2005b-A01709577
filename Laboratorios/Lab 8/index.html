@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - A01709577</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Password Validation</h2>
+        <form>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" autocomplete="new-password" required>
+
+            <div class="strength-bar">
+                <div id="strengthLevel" class="strength-level"></div>
+            </div>
+            <div class="feedback" id="feedbackText"></div>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="match" id="matchStatus"></div>
+            
+            <button type="submit">Register</button>
+        </form>
+        <section>
+            <p><strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong>  
+            <br>Para evitar enviar datos incorrectos y mejorar la experiencia del usuario.</p>
+            <p><strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong>  
+            <br>Modificando el código con herramientas del navegador.</p>
+            <p><strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong>  
+            <br>Porque mejora la usabilidad, pero siempre debe complementarse con validación del lado del servidor o base de datos.</p>
+        </section>
+    </div>
+    <script src="script.js"></script>  
+</body>
+</html>

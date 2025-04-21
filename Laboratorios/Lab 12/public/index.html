@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(270deg, #111, #333, #555, #777, #999);
+            background-size: 800% 800%;
+            animation: bgFlow 7.5s ease infinite;
+        }
+        @keyframes bgFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero is-dark is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Rigby119</h1>
+                <h2 class="subtitle">Portfolio</h2>
+            </div>
+        </div>
+    </section>
+    <main>
+        <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+            <div class="navbar-menu is-active">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/pokeGallery">Pokemon Gallery</a>
+                    <a class="navbar-item" href="/calculator">Calculator</a>
+                    <a class="navbar-item" href="/forms">Forms</a>
+                    <a class="navbar-item" href="/messages">Messages</a>
+                </div>
+            </div>
+        </nav>
+    </main>
+    
+    <footer class="footer has-background-dark has-text-white">
+        <div class="content has-text-centered">
+            <p><b>Roberto Serna Niño</b> - A01709577 - TC2005B</p>
+        </div>
+    </footer>
+</body>
+</html>

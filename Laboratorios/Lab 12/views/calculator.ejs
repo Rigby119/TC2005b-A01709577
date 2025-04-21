@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/css/calculator.css">
+</head>
+<body>
+    <nav class="custom-navbar">
+        <a href="/">Inicio</a>
+    </nav>
+    <div class="page-content">
+        <div class="container">
+            <div class="header">Calculadora</div>
+            <input type="text" class="display" placeholder="0" disabled>
+            
+            <div class="buttons">
+                <!--Primera línea-->
+                <button class="button clear" style="grid-column: span 2;" onclick="cls()">Clear</button>
+                <button class="button clear" onclick="del()">Del</button>
+                <button class="button operator" onclick="operatorWrite('/')">/</button>
+                <!--Segunda línea-->
+                <button class="button" onclick="numWrite(7)">7</button>
+                <button class="button" onclick="numWrite(8)">8</button>
+                <button class="button" onclick="numWrite(9)">9</button>
+                <button class="button operator" onclick="operatorWrite('*')">*</button>
+                <!--Tercera línea-->
+                <button class="button" onclick="numWrite(4)">4</button>
+                <button class="button" onclick="numWrite(5)">5</button>
+                <button class="button" onclick="numWrite(6)">6</button>
+                <button class="button operator" onclick="operatorWrite('+')">+</button>
+                <!--Cuarta línea-->
+                <button class="button" onclick="numWrite(1)">1</button>
+                <button class="button" onclick="numWrite(2)">2</button>
+                <button class="button" onclick="numWrite(3)">3</button>
+                <button class="button operator" onclick="operatorWrite('-')">-</button>
+                <!--Quinta línea-->
+                <button class="button" style="grid-column: span 2;" onclick="numWrite(0)">0</button>
+                <button class="button" onclick="dot()">.</button>
+                <button class="button equals" onclick="result()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function numWrite(num) {
+            const disp = document.querySelector('.display');
+            let val = disp.value;
+
+            if (val === "0" || val === "Error" || val.slice(0, 1) === "R") {
+                disp.value = num;
+            } else {
+                disp.value = val + num;
+            }
+        }
+
+        function operatorWrite(op) {
+            const disp = document.querySelector('.display');
+            let val = disp.value;
+
+            if (val === "0" || val === "Error") {
+                disp.value = "0";
+            } else if (val.slice(0, 1) === "R") {
+                disp.value = disp.value.slice(3) + op;
+            } else{
+                let last = disp.value.slice(-1);
+                if (last === "+" || last === "-" || last === "*" || last === "/") {
+                    disp.value = disp.value.slice(0, -1) + op;
+                } else {
+                    disp.value = val + op;
+                }
+            }
+        }
+
+        function cls() {
+            const disp = document.querySelector('.display');
+            disp.value = "0";
+        }
+
+        function del() {
+            const disp = document.querySelector('.display');
+
+            if (disp.value === "0" || disp.value.slice(0, 1) === "R") {
+                disp.value = "0";
+            } else {
+                disp.value = disp.value.slice(0, -1);
+            }
+        }
+
+        function dot() {
+            const disp = document.querySelector('.display');
+            let val = disp.value;
+
+            const lastOp = Math.max(
+                val.lastIndexOf("+"),
+                val.lastIndexOf("-"),
+                val.lastIndexOf("*"),
+                val.lastIndexOf("/")
+            );
+
+            const num = val.substring(lastOp + 1);
+
+            if (!num.includes(".")) {
+                disp.value = val + ".";
+            }
+        }
+
+        function result() {
+            const disp = document.querySelector('.display');
+            let val = disp.value;
+            let last = val.slice(-1);
+
+            if (last === "+" || last === "-" || last === "*" || last === "/" || last === ".") {
+                val = val.slice(0, -1);
+            }
+
+            try {
+                let res = new Function(`return ${val}`)();
+                disp.value = "R: " + res;
+            } catch (error) {
+                disp.value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>

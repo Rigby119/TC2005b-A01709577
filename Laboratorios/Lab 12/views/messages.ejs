@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Messages</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="has-background-light">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong>Inicio</strong>
+            </a>
+        </div>
+    </nav>
+    <section class="section is-flex is-justify-content-center is-align-items-center" style="min-height: 100vh;">
+        <div class="box" style="width: 100%; max-width: 600px;">
+            <h1 class="title has-text-centered">Received Messages</h1>
+
+            <% if (messages.length > 0) { %>
+                <ul>
+                    <% messages.forEach(msg => { %>
+                    <li class="mb-2">
+                        <strong><%= msg.name %>:</strong> <%= msg.message %>
+                    </li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p class="has-text-centered">There are no messages.</p>
+            <% } %>
+
+            <div class="has-text-centered">
+                <a href="/forms" class="button is-dark">Enviar un Mensaje</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

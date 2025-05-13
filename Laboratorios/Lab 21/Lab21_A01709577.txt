@@ -1,0 +1,151 @@
+Consultas con funciones agregadas:
+
+1.-
+2860 en cantidades y 1118484.47 de importe
+
+2.-
+Alvin	10	579429.4530142022
+Cecoferre	11	495450.55000000005
+Comex	10	528845.625
+La Ferre	12	843302.225
+La fragua	12	1991134.0499999998
+Oviedo	12	645130.0249999999
+Tabiquera del centro	10	2013592.275
+Tubasa	10	3075031.625
+
+3.-
+1010	Varilla 4/32	1051	523	528	134764.475
+1040	Varilla 3/18	803	263	540	149036.8
+1050	Varilla 4/34	1126	503	623	231533.75
+1060	Varilla 3/19	1016	324	692	229717.59999999998
+1100	Block	1165	466	699	35998.5
+1120	Sillar rosa	907	215	692	99770.0
+1140	Cantera blanca	802	219	583	192480.0
+1150	Cantera gris	911	453	458	2436105.1
+1230	Cemento 	842	312	530	328380.0
+1260	Gravilla	1091	460	631	107027.1
+1270	Tezontle	1052	506	546	90892.8
+1320	Tubería 4.4	1111	413	698	314301.9
+1340	Tubería 4.5	998	324	674	311875.0
+1380	Pintura C1011	947	302	645	1184341.875
+1390	Pintura B1021	804	107	697	113062.5
+1410	Pintura B1021	1068	467	601	150187.5
+1420	Pintura C1012	881	278	603	123890.625
+
+4.-
+Cecoferre	1270	Tezontle	526.0000
+Comex	1050	Varilla 4/34	563.0000
+La Ferre	1100	Block	582.5000
+La Ferre	1260	Gravilla	545.5000
+La fragua	1320	Tubería 4.4	555.5000
+Oviedo	1010	Varilla 4/32	525.5000
+Oviedo	1410	Pintura B1021	534.0000
+Tabiquera del centro	1060	Varilla 3/19	508.0000
+
+5.-
+Alvin	1120	Sillar rosa	453.5000	Mayor
+Cecoferre	1270	Tezontle	526.0000	Mayor
+Comex	1050	Varilla 4/34	563.0000	Mayor
+La Ferre	1100	Block	582.5000	Mayor
+La Ferre	1260	Gravilla	545.5000	Mayor
+La Ferre	1340	Tubería 4.5	499.0000	Mayor
+La fragua	1320	Tubería 4.4	555.5000	Mayor
+Oviedo	1010	Varilla 4/32	525.5000	Mayor
+Oviedo	1410	Pintura B1021	534.0000	Mayor
+Tabiquera del centro	1060	Varilla 3/19	508.0000	Mayor
+Tabiquera del centro	1380	Pintura C1011	473.5000	Mayor
+Tubasa	1150	Cantera gris	455.5000	Mayor
+Alvin	1280	Tepetate	219.0000	Menor
+Alvin	1360	Pintura C1010	314.5000	Menor
+Cecoferre	1030	Varilla 4/33	248.5000	Menor
+Cecoferre	1110	Megablock	352.5000	Menor
+Cecoferre	1190	Recubrimiento P1010	225.0000	Menor
+Cecoferre	1350	Tubería 3.8	272.0000	Menor
+Cecoferre	1430	Pintura B1022	294.5000	Menor
+Comex	1130	Sillar gris	312.5000	Menor
+Comex	1210	Recubrimiento P1028	56.5000	Menor
+Comex	1290	Tubería 3.5	205.5000	Menor
+Comex	1370	Pintura B1020	309.5000	Menor
+La Ferre	1020	Varilla 3/17	295.0000	Menor
+La fragua	1000	Varilla 3/16	209.5000	Menor
+La fragua	1160	Cantera rosa	203.0000	Menor
+La fragua	1240	Arena	259.0000	Menor
+La fragua	1400	Pintura C1011	249.0000	Menor
+Oviedo	1090	Ladrillos grises	247.0000	Menor
+Oviedo	1170	Cantera amarilla	116.5000	Menor
+Oviedo	1330	Tubería 3.7	323.5000	Menor
+Tabiquera del centro	1220	Recubrimiento P1037	341.0000	Menor
+Tabiquera del centro	1300	Tubería 4.3	320.0000	Menor
+Tubasa	1070	Varilla 4/35	252.5000	Menor
+Tubasa	1310	Tubería 3.6	135.5000	Menor
+
+
+
+
+Consultas con subconsultas:
+
+1.-
+2000	Jabón
+2110	Grava gruesa
+2120	Cemento gris
+2130	Arena fina
+2140	Varilla 3/8
+2150	Ladrillo rojo
+
+2.-
+La fragua
+
+3.-
+1000	Varilla 3/16
+1010	Varilla 4/32
+1020	Varilla 3/17
+1030	Varilla 4/33
+1050	Varilla 4/34
+1060	Varilla 3/19
+1070	Varilla 4/35
+1080	Ladrillos rojos
+1090	Ladrillos grises
+1100	Block
+1110	Megablock
+1120	Sillar rosa
+1130	Sillar gris
+1140	Cantera blanca
+1160	Cantera rosa
+1170	Cantera amarilla
+1180	Recubrimiento P1001
+1190	Recubrimiento P1010
+1210	Recubrimiento P1028
+1220	Recubrimiento P1037
+1230	Cemento 
+1240	Arena
+1250	Grava
+1260	Gravilla
+1270	Tezontle
+1280	Tepetate
+1290	Tubería 3.5
+1300	Tubería 4.3
+1310	Tubería 3.6
+1320	Tubería 4.4
+1330	Tubería 3.7
+1340	Tubería 4.5
+1360	Pintura C1010
+1370	Pintura B1020
+1380	Pintura C1011
+1390	Pintura B1021
+1400	Pintura C1011
+1410	Pintura B1021
+1420	Pintura C1012
+1430	Pintura B1022
+2000	Jabón
+2110	Grava gruesa
+2120	Cemento gris
+2130	Arena fina
+2140	Varilla 3/8
+2150	Ladrillo rojo
+
+4.-
+N/A no existe
+
+5.-
+BBBB800101	Oviedo
+GGGG800101	Tabiquera del centro
